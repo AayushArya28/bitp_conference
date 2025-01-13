@@ -68,7 +68,7 @@
 
     <!-- Notice Table -->
     <section class="notice">
-        <h2>Notice</h2>
+        <h2 style="border: #005493 2px solid;">Notice</h2>
         <table>
             <tr>
                 <th>Project</th>
@@ -97,15 +97,9 @@
         </table>
     </section>
 
-    <!-- Back-to-Top Button -->
-    <button id="back-to-top" onclick="scrollToTop()">&#8679;</button>
+    <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="up.js"></script>
 
-    <script>
-        // Back to top functionality
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
 </body>
 
 </html>
