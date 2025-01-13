@@ -8,20 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="international.html">International</a>
-        <a href="national.html">National</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact Us</a>
-    </div>
-    <div class="header">
-        <img src="img/BIT-Mesra.png" alt="BIT Mesra">
-    </div>
-    <div class="announcement-bar">
-        <p>2 Days INTERNATIONAL CONFERENCE in the dept. of CSE</p>
-    </div>
+    <body onload="loadNavHeader(); loadFooter();">
+
+        <!-- Nav Header Section -->
+        <div id="nav-header-container"></div>
+
     <div class="boxes">
         <div class="box">
             <p><strong>Name:</strong> <span class="name">Dr. Debashih Guha</span></p>
@@ -59,8 +50,11 @@
             <p><strong>Phone No:</strong> +1 479 321 0328</p>
         </div>
     </div>
-    <footer>
-        <p>© 2025 BIT Patna. All Rights Reserved.</p>
-    </footer>
+    
+    <!-- footer here -->
+    <div id="footer-container"></div>
+
+    <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="up.js"></script>
 </body>
 </html>

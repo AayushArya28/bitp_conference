@@ -9,32 +9,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="international.html">International</a>
-            <a href="national.html">National</a>
-            <a href="sponsors.html">Sponsors</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </nav>
+<body onload="loadFooter();">
 
-    <!-- Header Section -->
-    <header class="header">
-        <img src="img/BIT-Mesra.png" alt="BIT Mesra Logo" class="logo">
-        <div class="search-container">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Type to search">
+    <div class="navbar">
+        <div class="navlogo">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Birla_Institute_of_Technology_Mesra.png" alt="BIT Mesra">
+          </a>
         </div>
-    </header>
-
-    <!-- Red Announcement Bar -->
-    <div class="announcement-bar">
-        <p>2 Days INTERNATIONAL CONFERENCE in the dept. of CSE</p>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="international.html">International</a>
+          <a href="national.html">National</a>
+          <a href="sponsors.html">Sponsors</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      
+    <div class="header">
+        <img src="img/BIT-Mesra.png" alt="BIT Mesra">
     </div>
+    <div class="announcement-bar">
+        <marquee behavior="" direction="">
+            <p>2 Days INTERNATIONAL CONFERENCE in the dept. of CSE</p>
+        </marquee>
+    </div>
+
+
 
     <!-- Conference Section -->
     <section class="conference">
@@ -68,7 +70,7 @@
 
     <!-- Notice Table -->
     <section class="notice">
-        <h2 style="border: #005493 2px solid;">Notice</h2>
+        <h2 style="border: #005493 2px solid; background-color: #D93624;">Notice</h2>
         <table>
             <tr>
                 <th>Project</th>
@@ -96,6 +98,9 @@
             </tr>
         </table>
     </section>
+
+    <!-- footer here -->
+    <div id="footer-container"></div>
 
     <button onclick="topFunction()" id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <script src="up.js"></script>

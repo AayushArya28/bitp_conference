@@ -18,3 +18,24 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+function loadNavHeader() {
+    fetch("nav-header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("nav-header-container").innerHTML = data;
+        })
+        .catch(() => {
+            console.error("Failed to load nav-header.html");
+        });
+}
+
+function loadFooter() {
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(() => {
+            console.error("Failed to load footer.html");
+        });
+}
