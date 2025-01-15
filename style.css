@@ -8,11 +8,10 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    /* right: 0; */
     background-color: #0B6EB1;
     width: 100%;
     text-align: center;
-    z-index: 1;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,49 +26,59 @@ body {
 .nav-links {
     display: flex;
     gap: 20px;
-  }
-  
-  .nav-links a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-  }
-
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 10px;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
     background-color: #005493;
     border-radius: 5px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px 20px 20px 20px;
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    cursor: pointer;
+    z-index: 11;
 }
 
-.header .logo {
-    text-align: left;
-    height: 25px;
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0B6EB1;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        transform: translateX(100%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 
 .search-container {
     position: relative;
@@ -278,6 +287,7 @@ copyright {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
+        margin-top: 30px;
         flex-direction: column;
         text-align: center;
     }
@@ -318,6 +328,15 @@ body {
 }
 
 /* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
 .header img {
     max-width: 100%;
     height: auto;

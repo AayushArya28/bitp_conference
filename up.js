@@ -23,6 +23,12 @@ function loadNavHeader() {
         .then(response => response.text())
         .then(data => {
             document.getElementById("nav-header-container").innerHTML = data;
+            // Move the event listener logic here, after nav-header loads
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
         })
         .catch(() => {
             console.error("Failed to load nav-header.html");
