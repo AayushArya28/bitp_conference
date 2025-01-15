@@ -165,6 +165,50 @@ body {
     margin: 5px 0 0;
 }
 
+.statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B6EB1;
+    color: white;
+    padding: 20px 10px;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .stat-item h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  .stat-item p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+  }
+  
+  .divider {
+    height: 50px;
+    width: 1px;
+    background-color: white;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .statistics {
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      margin-bottom: 15px;
+    }
+    .divider {
+      display: none;
+    }
+  }
+  
+
 /* Notice Table */
 .notice {
     padding-top: 15px;
